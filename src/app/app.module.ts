@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
 import { AddToCartModalComponent } from './components/partials/modal/add-to-cart-modal/add-to-cart-modal.component';
 import { DeleteProductModalComponent } from './components/partials/modal/delete-product-modal/delete-product-modal.component';
 import { AddProductComponent } from './components/shop/add-product/add-product.component';
+import { HeaderPageComponent } from './components/partials/header-page/header-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,15 @@ import { AddProductComponent } from './components/shop/add-product/add-product.c
     NotFoundComponent,
     AddToCartModalComponent,
     DeleteProductModalComponent,
-    AddProductComponent
+    AddProductComponent,
+    HeaderPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
